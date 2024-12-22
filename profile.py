@@ -1,5 +1,7 @@
 #Use to display the Report like sherlock does
 import termcolor
+import json
+import requests
 
 class Profile:
     # check username with login list json, hash password to check if it matches
@@ -16,6 +18,37 @@ class Profile:
         self.domain = domain
         self.ip = ip
     class Report:
-        def __init__(self, firstName, lastName, phoneNumber, email, username, address, zipCode, domain, ip):
-
-    #add function to save to db, do a report, display report
+        def __init__(self, name, phoneNumber, email, username, address, zipCode, domain, ip):
+            self.name = (firstName, lastName)
+            self.phoneNumber = phoneNumber
+            self.email = email
+            self.username = username
+            self.address = address
+            self.zipCode = zipCode
+            self.domain = domain
+            self.ip = ip
+            self.report = 
+            {
+                "name": [],
+                "phoneNumber": [],
+                "email": [],
+                "username": [],
+                "address": [],
+                "zipCode": [],
+                "domain": [],
+                "ip": [],
+                "allOutput": []
+            }
+        
+        def buildReport(self):
+            #cycle through the api's and add to the report dictionary
+            apiList = json.loads("url_query.json")
+            for x in apiList["PhoneNumber"]:
+                termcolor
+                split = x.split(";")
+                numberAdded = split[0] + self.phoneNumber + split[1]
+                output = request.get(numberAdded)
+                self.report["allOutput"].append(output)
+                #need to add more specific variables for report
+                #for now just add the reigon of the phone number to the address
+                self.report[""]
