@@ -14,20 +14,22 @@ from core.profile_manager import ProfileManager
 from utils.config import load_config
 
 
+def get_help_text():
+    """Read help text from README_HELP.md"""
+    try:
+        with open('README_HELP.md', 'r') as f:
+            return f.read()
+    except FileNotFoundError:
+        return "Help file not found. Please check README_HELP.md exists."
+
+
 def create_parser():
     """Create and configure the argument parser"""
     parser = argparse.ArgumentParser(
         description="Auto OSINT - Comprehensive OSINT Intelligence Gathering Tool",
         formatter_class=argparse.RawDescriptionHelpFormatter,
-        epilog="""
-Examples:
-  python main.py --email john.doe@example.com --social --breach
-  python main.py --username johndoe --full --save-report report.json
-  python main.py --input-file targets.txt --social --public --verbose
-  python main.py --domain example.com --images --geolocation
-  python main.py --username johndoe --social --save-profile
-  python main.py --load-profile profile_johndoe --social --update-profile
-        """
+        epilog=get_help_text(),
+        add_help=False  # Disable default help to use custom help
     )
     
     # Input arguments
@@ -72,6 +74,7 @@ Examples:
     other_group.add_argument("--debug", action="store_true", help="Enable debug mode")
     other_group.add_argument("--test", action="store_true", help="Sandbox test mode")
     other_group.add_argument("--timeout", type=int, default=30, help="Request timeout in seconds")
+    other_group.add_argument("--help", action="store_true", help="Show this help message")
     
     return parser
 
@@ -83,7 +86,7 @@ def validate_inputs(args):
     
     if not any(inputs) and not any(profile_ops):
         print("Error: At least one input method must be specified.")
-        print("Use --help for usage information.")
+        print("\n" + get_help_text())
         sys.exit(1)
 
 
@@ -151,6 +154,11 @@ def main():
     """Main application entry point"""
     parser = create_parser()
     args = parser.parse_args()
+    
+    # Handle help display
+    if args.help:
+        print(get_help_text())
+        return
     
     # Validate inputs
     validate_inputs(args)
