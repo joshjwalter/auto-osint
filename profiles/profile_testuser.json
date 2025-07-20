@@ -1,0 +1,153 @@
+{
+  "target": {
+    "username": "testuser"
+  },
+  "profile_name": "profile_testuser",
+  "created_at": "2025-07-19T23:54:19.283393",
+  "last_updated": "2025-07-19T23:57:17.997191",
+  "scan_history": [
+    {
+      "timestamp": "2025-07-19T23:57:17.997191",
+      "scan_results": {
+        "target": {
+          "username": "testuser"
+        },
+        "scan_time": "2025-07-19T23:57:17.997167",
+        "search_types": [
+          "breach"
+        ],
+        "results": {
+          "breach": {
+            "data": {
+              "breaches": {},
+              "summary": {
+                "total_breaches": 0,
+                "total_records": 0,
+                "apis_checked": 0
+              }
+            },
+            "scan_time": 2.1457672119140625e-06,
+            "status": "completed"
+          }
+        }
+      }
+    }
+  ],
+  "current_data": {
+    "target": {
+      "username": "testuser"
+    },
+    "scan_time": "2025-07-19T23:54:19.283352",
+    "search_types": [
+      "social"
+    ],
+    "results": {
+      "social": {
+        "data": {
+          "platforms": {
+            "twitter": [
+              {
+                "username": "testuser",
+                "url": "https://twitter.com/testuser",
+                "found": true,
+                "checked_at": "2025-07-19T23:54:19.283372"
+              }
+            ],
+            "linkedin": [
+              {
+                "username": "testuser",
+                "url": "https://www.linkedin.com/in/testuser",
+                "found": true,
+                "checked_at": "2025-07-19T23:54:19.283375"
+              }
+            ],
+            "instagram": [
+              {
+                "username": "testuser",
+                "url": "https://www.instagram.com/testuser",
+                "found": false,
+                "checked_at": "2025-07-19T23:54:19.283377"
+              }
+            ],
+            "facebook": [
+              {
+                "username": "testuser",
+                "url": "https://www.facebook.com/testuser",
+                "found": false,
+                "checked_at": "2025-07-19T23:54:19.283379"
+              }
+            ],
+            "tiktok": [
+              {
+                "username": "testuser",
+                "url": "https://www.tiktok.com/@testuser",
+                "found": false,
+                "checked_at": "2025-07-19T23:54:19.283381"
+              }
+            ],
+            "reddit": [
+              {
+                "username": "testuser",
+                "url": "https://www.reddit.com/user/testuser",
+                "found": false,
+                "checked_at": "2025-07-19T23:54:19.283382"
+              }
+            ],
+            "github": [
+              {
+                "username": "testuser",
+                "url": "https://github.com/testuser",
+                "found": true,
+                "checked_at": "2025-07-19T23:54:19.283384"
+              }
+            ],
+            "quora": [
+              {
+                "username": "testuser",
+                "url": "https://www.quora.com/profile/testuser",
+                "found": false,
+                "checked_at": "2025-07-19T23:54:19.283385"
+              }
+            ],
+            "medium": [
+              {
+                "username": "testuser",
+                "url": "https://medium.com/@testuser",
+                "found": false,
+                "checked_at": "2025-07-19T23:54:19.283387"
+              }
+            ]
+          },
+          "summary": {
+            "total_platforms": 9,
+            "found_profiles": 3,
+            "not_found": 6
+          }
+        },
+        "scan_time": 2.288818359375e-05,
+        "status": "completed"
+      },
+      "breach": {
+        "data": {
+          "breaches": {},
+          "summary": {
+            "total_breaches": 0,
+            "total_records": 0,
+            "apis_checked": 0
+          }
+        },
+        "scan_time": 2.1457672119140625e-06,
+        "status": "completed"
+      }
+    }
+  },
+  "summary": {
+    "total_scans": 2,
+    "social_media_profiles": 3,
+    "breaches_found": 0,
+    "public_records": 0,
+    "domains_checked": 0,
+    "images_found": 0,
+    "locations_found": 0
+  }
+}
